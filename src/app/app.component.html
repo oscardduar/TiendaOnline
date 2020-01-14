@@ -15,13 +15,10 @@ title no es igual a oscar
 </li>
 </ul>
 
-<button (click)="addEjemplo()">addEjemplo</button>
-<ul>
-    
-    <li *ngFor="let oscar of ejemplo; index as i">
-        {{oscar}}{{i}}
-        <button (click)="deleteEjemplo(i)">deleteEjemplo</button>
-    </li>
+<div *ngFor="let elemento of products">
+{{elemento.title}}
+<img [src]="elemento.image">
+{{elemento.price}}
+{{elemento.description}}
 
-</ul>
-<li *ngIf="ejemplo.length===10">Llegaste a los 10</li>
+</div>
